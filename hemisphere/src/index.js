@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import HemisphereDisplay from "./HemisphereDisplay";
 
 class App extends React.Component {
     
@@ -22,7 +23,10 @@ class App extends React.Component {
         }
 
         if(!this.state.errorMessage && this.state.latitude){
-            return <div>{this.state.latitude}</div>
+            // So now we are taking a property from the state on App component and passing it as a props down into the
+            // hempisphereDisplay. Now the Hemisphere is linked with the App component. And any time we call
+            // setState, it resets itself.
+            return <div> <HemisphereDisplay latitude = {this.state.latitude} /></div>
         }
 
         else {
