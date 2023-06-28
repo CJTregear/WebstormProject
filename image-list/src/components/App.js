@@ -3,7 +3,7 @@ import SearchInput from "./SearchInput";
 
 const App = () => {
     return(
-        <div>
+        <div className='ui container' style={{margin: '30px'}}>
             <SearchInput />
         </div>
     )
